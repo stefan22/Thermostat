@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title="Energy Saving Thermostat">
+  <link rel="stylesheet" type="text/css" href="public/css/style.css">
+  <link rel="icon" href="lib/jasmine_favicon.png">
+</head>
+<body id="home">
+  <div id="wrapper">
+    <header><h1>Thermostat</h1></header>
+
+      <section>
+        <div id='temp'>20
+        </div>
+        <div id='power-saving'>true
+        </div>
+
+      </section>
+
+      <section>
+        <ul>
+          <li><button id='up' onclick="thermostat1.Up()">Up</button></li>
+          <li><button id='down' onclick="thermostat1.Down()">Down</button></li>
+          <li><button id='reset' onclick="thermostat1.Reset()">Reset </button></li>
+          <li><button id='powersaveon' onclick="thermostat1.PowerOn()">Power Saving Mode ON</button></li>
+          <li><button id='powersaveoff' onclick="thermostat1.PowerOff()">Power Saving Mode OFF</button></li>
+        </ul>
+      </section>
+
+
+      <script src="src/Thermostat.js"></script>
+      <script type="text/javascript">
+          Thermostat.prototype.Up = function() {
+          this.increaseTemperature();
+          document.getElementById('temp').innerHTML = thermostat1.currentTemperature;
+          };
+          Thermostat.prototype.Down = function() {
+          this.decreaseTemperature();
+          document.getElementById('temp').innerHTML = thermostat1.currentTemperature;
+          };
+          Thermostat.prototype.Reset = function() {
+          this.resetButton();
+          document.getElementById('temp').innerHTML = thermostat1.currentTemperature;
+          };
+          Thermostat.prototype.PowerOn = function() {
+          this.powerSavingModeOn;
+          document.getElementById('power-saving').innerHTML = thermostat1.powerSavingMode;
+          document.getElementById('temp').innerHTML = thermostat1.temp;
+          };
+          Thermostat.prototype.PowerOff = function() {
+          this.powerSavingModeOff;
+          document.getElementById('power-saving').innerHTML = thermostat1.powerSavingMode;
+          };
+      </script>
+  </wrapper>
+</body>
+</html>

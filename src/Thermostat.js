@@ -11,7 +11,7 @@ Thermostat.prototype.increaseTemperature = function(degrees) {
    if (this.powerSavingModeOff) {
     this.powerSavingModeOff;
   } else {
-    x;
+    return parseInt(x + 1);
   }
 };
 
@@ -45,10 +45,6 @@ Thermostat.prototype.colorDisplay = function() {
     return temp;
   }
 
-
-
-
-
-
-
 };
+
+thermostat1 = new Thermostat;
