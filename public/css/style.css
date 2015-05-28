@@ -13,7 +13,7 @@
   background: -o-linear-gradient(top, #feffff 0%,#d2ebf9 100%);
   background: -ms-linear-gradient(top, #feffff 0%,#d2ebf9 100%);
   background: linear-gradient(to bottom, #feffff 0%,#d2ebf9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 );
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 );*/
 
 }
 
@@ -63,7 +63,7 @@ button {
 	background: -o-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
 	background: -ms-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
 	background: linear-gradient(top,#25A6E1 0%,#188BC0 100%);
-	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);
+	/*filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);*/
 	padding:5px 9px;
 	color:#fff;
 	font-family:'Helvetica Neue',sans-serif;
@@ -98,5 +98,17 @@ button {
     margin-bottom: .3em;
     border:1px solid rgba(67,67,67,.1);
     border-radius:6px;
+
+  }
+
+  #update {
+    width:50%;
+    margin:0 auto;
+
+  }
+
+  #update li {
+    text-align: center;
+    color:#333;
 
   }

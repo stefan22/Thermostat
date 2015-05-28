@@ -1,37 +1,25 @@
-// var request;
-// if (window.XMLHttpRequest) {
-//     request = new XMLHttpRequest();
-// } else {
-//     request = new ActiveXObject('Microsoft.XMLHTTP');
-// }
-//
-// request.open('GET', 'data.txt');
-// request.onreadystatechange = function() {
-//     if ((request.readyState === 4) && (request.status === 200)) {
-//       var modify = document.getElementById('update');
-//       modify.innerHTML = request.responseText;
-//   }
-// }
-// request.send();
-//
-// ===================================================================
-var request;
-if (window.XMLHttpRequest) {
-    request = new XMLHttpRequest();
-} else {
-    request = new ActiveXObject('Microsoft.XMLHTTP');
-}
+$('#search').keyup(function() {
+  var searchfield = $('#search').val();
+  var myExp = new RegExp(searchfield)
+  $.getJSON('data.json', function(data) {
+    console.log(data);
+    var output = '<ul class="searchresults">';
+    $.each(data, function(key,val) {
+        if ((val.name.search(myExp) != -1) ||
+            (val.bio.search(myExp) != -1)) {
+                output += '<li>';
+                output += '<h2>' + val.name + '</h2>';
+                output += '<p>' + val.bio + '</p>'
+                output += '</li>';
+        }
+    });
+    output += '</ul>';
+    $('#update').html(output);
+  }); //get JSON
+});
 
-request.open('GET', 'data.json');
-request.onreadystatechange = function() {
-    if ((request.readyState === 4) && (request.status === 200)) {
-      var items = JSON.parse(request.responseText);
-      var output = '<ul>';
-      for (var key in items) {
-          output += '<li>' + items[key].name + '</li>';
-      }
-      output += '</ul>';
-      document.getElementById('update').innerHTML = output;
-  }
-}
-request.send();
+
+
+// weather underground api
+// wunderground.com
+// api key: 4ccb3bd543770f97
