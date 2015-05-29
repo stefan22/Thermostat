@@ -1,0 +1,25 @@
+  NOTES:
+
+    Commits:
+
+      added a third party api --> this is the pre sinatra layout thermostat app
+
+      thermostat now sinatra ready --> i reorganized my files,created app folder
+                                       and a few other files. Tested it in local
+                                       host:9292 and it works fine.
+                                       Third party api from weather underground
+                                       works fine, however ajax it's not loading
+                                       my city names local json file.
+                                       javascript and thermostat works just fine.
+
+      Heroku commit -->  created an app in Heroku ( thermostat1)
+                         http://thermostat1.herokuapp.com
+
+                         Javascript thermostat works fine.
+                         Third party api from weather underground is not working
+                         in Heroku.
+                         Ajax /json files with city names aren't working in heroku
+                         either.
+
+                         My app was much better looking before heroku and sinatra
+                         got involved!
