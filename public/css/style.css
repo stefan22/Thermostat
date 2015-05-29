@@ -112,3 +112,22 @@ button {
     color:#333;
 
   }
+
+
+  p {text-align: center; font-size: 18px; margin:3px;}
+
+  input[type="search"] {
+    width:50%;
+    margin-left:25%;
+    text-align:center;
+
+  }
+
+  #api {
+    padding:10px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 22px;
+    color:red;
+
+  }

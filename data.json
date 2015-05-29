@@ -1,20 +1,32 @@
 [
   {
-    "name": "london",
-    "shortname": "jonbell",
-    "bio" : "London comes alive in the spring."
+    "city": "london",
+    "weather" : "London comes alive in the spring."
   },
 
   {
-    "name": "rome",
-    "shortname": "jonbell",
-    "bio" : "Rome is a magical place in winter as streets sparkle with fairy lights "
+    "city": "rome",
+    "weather" : "Rome is a magical place in winter as streets sparkle with fairy lights "
   },
 
   {
-    "name": "barcelona",
-    "shortname": "jonbell",
-    "bio" : "Temperatures can skyrocket in summer but they can also remain temperate and pleasant."
+    "city": "barcelona",
+    "weather" : "Temperatures can skyrocket in summer but they can also remain temperate and pleasant."
+  },
+
+  {
+    "city": "paris",
+    "weather" : "Paris comes alive in the spring."
+  },
+
+  {
+    "city": "los angeles",
+    "weather" : "Los Angeles is a magical place in winter as streets sparkle with fairy lights "
+  },
+
+  {
+    "city": "san francisco",
+    "weather" : "Temperatures can skyrocket in summer but they can also remain temperate and pleasant."
   }
 
 

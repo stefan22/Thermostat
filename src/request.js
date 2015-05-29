@@ -4,12 +4,13 @@ $('#search').keyup(function() {
   $.getJSON('data.json', function(data) {
     console.log(data);
     var output = '<ul class="searchresults">';
+        output +='<h2 style="text-align:center;text-decoration:underline;">Latest updates</h2>';
     $.each(data, function(key,val) {
-        if ((val.name.search(myExp) != -1) ||
-            (val.bio.search(myExp) != -1)) {
+        if ((val.city.search(myExp) != -1) ||
+            (val.weather.search(myExp) != -1)) {
                 output += '<li>';
-                output += '<h2>' + val.name + '</h2>';
-                output += '<p>' + val.bio + '</p>'
+                output += '<h2>' + (val.city) + '</h2>';
+                output += '<p>' + val.weather + '</p>'
                 output += '</li>';
         }
     });

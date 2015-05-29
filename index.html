@@ -17,17 +17,19 @@
         <div id='power-saving'>true
         </div>
 
+        <div id="api">third party api</div>
+
       </section id="searcharea">
           <p>Enter the name of the city</p>
           <input type="search" name="search" id="search" placeholder="enter city name" />
           <div id="update"></div>
       <section>
         <ul>
-          <li><button id='up' onclick="up()">Up</button></li>
-          <li><button id='down' onclick="down()">Down</button></li>
-          <li><button id='reset' onclick="reset()">Reset </button></li>
-          <li><button id='powersaveon' onclick="powerOn()">Power Saving Mode ON</button></li>
-          <li><button id='powersaveoff' onclick="powerOff()">Power Saving Mode OFF</button></li>
+          <li><button onclick="up()">Up</button></li>
+          <li><button onclick="down()">Down</button></li>
+          <li><button onclick="reset()">Reset </button></li>
+          <li><button onclick="powerOn()">Power Saving Mode ON</button></li>
+          <li><button onclick="powerOff()">Power Saving Mode OFF</button></li>
         </ul>
       </section>
 
@@ -70,12 +72,16 @@
       <script>
           jQuery(document).ready(function($) {
             $.ajax({
-            url : "http://api.wunderground.com/api/4ccb3bd543770f97/geolookup/conditions/q/IA/Cedar_Rapids.json",
+            url : "http://api.wunderground.com/api/4ccb3bd543770f97/geolookup/conditions/q/England/London.json",
             dataType : "jsonp",
             success : function(parsed_json) {
             var location = parsed_json['location']['city'];
             var temp_f = parsed_json['current_observation']['temp_f'];
-            alert("Current temperature in " + location + " is: " + temp_f);
+            console.log(('Current temperature in ' + location + ' is: ' + temp_f));
+
+            document.getElementById('api').innerHTML = 'Current temperature in ' +
+                                   location + ' is: ' + temp_f;
+
             }
             });
           });
